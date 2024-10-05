@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        .main{
+            background-color: black;
+            width: 382px;
+            margin: auto;
+            padding: 30px;
+        }
+        .ans{
+            font-size: 50px;
+            color: white;
+            text-align: right;
+            padding-right: 50px;
+            margin: -50px;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: repeat(4, 80px);
+            grid-template-rows: repeat(5, 80px);
+            row-gap: 20px;
+            column-gap: 20px;
+            font-size: 30px;
+        }
+        .lg{
+            background-color: lightgray;
+            border: 1px solid lightgray;
+            border-radius: 40px;
+            text-align: center;
+            padding-top: 20px;
+        }
+        .o{
+            background-color: orange;
+            border: 1px solid orange;
+            border-radius: 40px;
+            color: white;
+            text-align: center;
+            padding-top: 20px;
+        }
+        .g{
+            background-color: gray;
+            border: 1px solid gray;
+            border-radius: 40px;
+            color: white;
+            text-align: center;
+            padding-top: 20px;
+        }
+        #item1{
+            grid-column: 1 / 3;
+            text-align: left;
+            padding-left: 15px;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+    <div class="ans">
+        <h1>7744</h1>
+    </div>
+
+    <div class="container">
+        <div class="lg">C</div>
+        <div class="lg">+/-</div>
+        <div class="lg">%</div>
+        <div class="o">÷</div>
+        <div class="g">7</div>
+        <div class="g">8</div>
+        <div class="g">9</div>
+        <div class="o">x</div>
+        <div class="g">4</div>
+        <div class="g">5</div>
+        <div class="g">6</div>
+        <div class="o">-</div>
+        <div class="g">1</div>
+        <div class="g">2</div>
+        <div class="g">3</div>
+        <div class="o">+</div>
+        <div class="g" id="item1">0</div>
+        <div class="g">,</div>
+        <div class="o">=</div>
+    </div>
+    </div>
+</body>
+</html>

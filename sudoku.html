@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku</title>
+    <style>
+        td{
+            width: 30px;
+        }
+        p{
+            text-align: center;
+            font-size: 30px;
+        }
+        #white{
+            background-color: whitesmoke;
+            padding: 10px;
+        }
+        #green{
+            background-color: seagreen;
+            padding: 10px;
+        }
+        table, td{
+            border: 2px solid black;
+            border-collapse: collapse;
+            font-size: 25px;
+           text-align: center;
+        }
+        .main{
+            display: flex;
+        }
+        .que{
+            margin-left: auto;
+            margin-right: 50px;
+        }
+        .ans{
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="que">
+            <p>SUDOKU</p>
+            <table>
+                <tr>
+                    <td id="white">8</td>
+                    <td id="white"></td>
+                    <td id="white">6</td>
+                    <td id="green"></td>
+                    <td id="green"></td>
+                    <td id="green">3</td>
+                    <td id="white"></td>
+                    <td id="white">9</td>
+                    <td id="white"></td>
+                </tr>
+                <tr>
+                    <td id="white"></td>
+                    <td id="white">4</td>
+                    <td id="white"></td>
+                    <td id="green"></td>
+                    <td id="green">1</td>
+                    <td id="green"></td>
+                    <td id="white"></td>
+                    <td id="white">6</td>
+                    <td id="white">8</td>
+                </tr>
+                <tr>
+                    <td id="white">2</td>
+                    <td id="white"></td>
+                    <td id="white"></td>
+                    <td id="green">8</td>
+                    <td id="green">7</td>
+                    <td id="green"></td>
+                    <td id="white"></td>
+                    <td id="white"></td>
+                    <td id="white">5</td>
+                </tr>
+                <tr>
+                    <td id="green">1</td>
+                    <td id="green"></td>
+                    <td id="green">8</td>
+                    <td id="white"></td>
+                    <td id="white"></td>
+                    <td id="white">5</td>
+                    <td id="green"></td>
+                    <td id="green">2</td>
+                    <td id="green"></td>
+                </tr>
+                <tr>
+                    <td id="green"></td>
+                    <td id="green">3</td>
+                    <td id="green"></td>
+                    <td id="white">1</td>
+                    <td id="white"></td>
+                    <td id="white"></td>
+                    <td id="green"></td>
+                    <td id="green">5</td>
+                    <td id="green"></td>
+                </tr>
+                <tr>
+                    <td id="green">7</td>
+                    <td id="green"></td>
+                    <td id="green">5</td>
+                    <td id="white"></td>
+                    <td id="white">3</td>
+                    <td id="white"></td>
+                    <td id="green">9</td>
+                    <td id="green"></td>
+                    <td id="green"></td>
+                </tr>
+                <tr>
+                    <td id="white"></td>
+                    <td id="white">2</td>
+                    <td id="white">1</td>
+                    <td id="green"></td>
+                    <td id="green"></td>
+                    <td id="green">7</td>
+                    <td id="white"></td>
+                    <td id="white">4</td>
+                    <td id="white"></td>
+                </tr>
+                <tr>
+                    <td id="white">6</td>
+                    <td id="white"></td>
+                    <td id="white"></td>
+                    <td id="green"></td>
+                    <td id="green">2</td>
+                    <td id="green"></td>
+                    <td id="white">8</td>
+                    <td id="white"></td>
+                    <td id="white"></td>
+                </tr>
+                <tr>
+                    <td id="white"></td>
+                    <td id="white">8</td>
+                    <td id="white">7</td>
+                    <td id="green">6</td>
+                    <td id="green"></td>
+                    <td id="green">4</td>
+                    <td id="white"></td>
+                    <td id="white"></td>
+                    <td id="white">3</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="ans">
+            <p>ANSWER</p>
+            <table>
+                <tr>
+                    <td id="white">8</td>
+                    <td id="white">7</td>
+                    <td id="white">6</td>
+                    <td id="green">5</td>
+                    <td id="green">4</td>
+                    <td id="green">3</td>
+                    <td id="white">1</td>
+                    <td id="white">9</td>
+                    <td id="white">2</td>
+                </tr>
+                <tr>
+                    <td id="white">5</td>
+                    <td id="white">4</td>
+                    <td id="white">3</td>
+                    <td id="green">2</td>
+                    <td id="green">1</td>
+                    <td id="green">9</td>
+                    <td id="white">7</td>
+                    <td id="white">6</td>
+                    <td id="white">8</td>
+                </tr>
+                <tr>
+                    <td id="white">2</td>
+                    <td id="white">1</td>
+                    <td id="white">9</td>
+                    <td id="green">8</td>
+                    <td id="green">7</td>
+                    <td id="green">6</td>
+                    <td id="white">4</td>
+                    <td id="white">3</td>
+                    <td id="white">5</td>
+                </tr>
+                <tr>
+                    <td id="green">1</td>
+                    <td id="green">9</td>
+                    <td id="green">8</td>
+                    <td id="white">7</td>
+                    <td id="white">6</td>
+                    <td id="white">5</td>
+                    <td id="green">3</td>
+                    <td id="green">2</td>
+                    <td id="green">4</td>
+                </tr>
+                <tr>
+                    <td id="green">4</td>
+                    <td id="green">3</td>
+                    <td id="green">2</td>
+                    <td id="white">1</td>
+                    <td id="white">9</td>
+                    <td id="white">8</td>
+                    <td id="green">6</td>
+                    <td id="green">5</td>
+                    <td id="green">7</td>
+                </tr>
+                <tr>
+                    <td id="green">7</td>
+                    <td id="green">6</td>
+                    <td id="green">5</td>
+                    <td id="white">4</td>
+                    <td id="white">3</td>
+                    <td id="white">2</td>
+                    <td id="green">9</td>
+                    <td id="green">8</td>
+                    <td id="green">1</td>
+                </tr>
+                <tr>
+                    <td id="white">3</td>
+                    <td id="white">2</td>
+                    <td id="white">1</td>
+                    <td id="green">9</td>
+                    <td id="green">8</td>
+                    <td id="green">7</td>
+                    <td id="white">5</td>
+                    <td id="white">4</td>
+                    <td id="white">6</td>
+                </tr>
+                <tr>
+                    <td id="white">6</td>
+                    <td id="white">5</td>
+                    <td id="white">4</td>
+                    <td id="green">3</td>
+                    <td id="green">2</td>
+                    <td id="green">1</td>
+                    <td id="white">8</td>
+                    <td id="white">7</td>
+                    <td id="white">9</td>
+                </tr>
+                <tr>
+                    <td id="white">9</td>
+                    <td id="white">8</td>
+                    <td id="white">7</td>
+                    <td id="green">6</td>
+                    <td id="green">5</td>
+                    <td id="green">4</td>
+                    <td id="white">2</td>
+                    <td id="white">1</td>
+                    <td id="white">3</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
